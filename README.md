@@ -8,9 +8,22 @@ First clone/downlaod this repository
 ```
 cd bb-osx
 brew install libmikmod aalib
-./configure; make; make install
-bb
 ```
+
+For compling on Apple Silicon architecture. (compling issue still exist)
+```
+./configure
+make
+```
+
+For compiling on x86-64 architecture.
+```
+./configure --with-aalib-exec-prefix=/opt/homebrew --with-libmikmod-exec-prefix=/opt/homebrew
+make
+```
+
+Then execute `./bb` to run.
+
 Note: `./configure` sometimes needs the path to `libmikmod` passed manually. This can be done with `--with-libmikmod-prefix=[prefix]`.
 Note: Audio may not play, this looks like a bug.
 
